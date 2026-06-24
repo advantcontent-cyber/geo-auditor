@@ -1,4 +1,4 @@
-# GEO Auditor — Advant
+# GEO Auditor — AMN
 
 GEO (Generative Engine Optimization) visibility auditor for hospitality. Enter a hotel
 website and get a live report on how likely it is to appear in AI search — ChatGPT,

@@ -310,7 +310,7 @@ export function ReportScreen({ report }: { report: Report }) {
         </section>
 
         <footer className="pt-6 text-center text-xs text-muted/70">
-          <span className="font-semibold text-ink">Advant</span> · GEO Visibility Intelligence for
+          <span className="font-semibold text-ink">AMN</span> · GEO Visibility Intelligence for
           Hospitality
         </footer>
       </main>

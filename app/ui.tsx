@@ -2,10 +2,9 @@ import Link from "next/link";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <Link href="/" className={`inline-flex items-center ${className}`} aria-label="Advant">
-      <span className="text-[22px] font-extrabold lowercase tracking-tight text-ink">
-        advant
-      </span>
+    <Link href="/" className={`inline-flex items-center ${className}`} aria-label="AMN">
+      {/* AMN mark. Swap to /amn-logo-blue.png or /amn-logo-white.png if preferred. */}
+      <img src="/amn-logo-black.png" alt="AMN" className="h-8 w-auto" />
     </Link>
   );
 }

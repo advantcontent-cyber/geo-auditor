@@ -152,7 +152,7 @@ async function fetchSignals(url: string, domain: string): Promise<Signals> {
         redirect: "follow",
         headers: {
           "User-Agent":
-            "Mozilla/5.0 (compatible; GEOAuditorBot/1.0; +https://advant.ai)",
+            "Mozilla/5.0 (compatible; AMN-GEOAuditorBot/1.0)",
           Accept: "text/html",
         },
       }),

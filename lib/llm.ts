@@ -210,7 +210,7 @@ export async function analyzeWithLlm(
       headers: {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
-        "X-Title": "Advant GEO Auditor",
+        "X-Title": "AMN GEO Auditor",
       },
       body: JSON.stringify(body),
     });

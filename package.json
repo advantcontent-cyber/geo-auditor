@@ -2,7 +2,7 @@
   "name": "geo-auditor",
   "version": "1.0.0",
   "private": true,
-  "description": "Advant GEO Auditor — audit a hotel website's visibility in AI search (ChatGPT, Perplexity, Google AI Overviews).",
+  "description": "AMN GEO Auditor — audit a hotel website's visibility in AI search (ChatGPT, Perplexity, Google AI Overviews).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

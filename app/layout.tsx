@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GEO Auditor — Advant",
+  title: "GEO Auditor — AMN",
   description:
     "GEO Visibility Intelligence for Hospitality. See whether your hotel appears in ChatGPT, Perplexity, and Google AI Overviews.",
 };

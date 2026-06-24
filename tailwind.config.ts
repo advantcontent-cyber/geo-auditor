@@ -5,13 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Advant: editorial black-on-white
+        // AMN: editorial black-on-white with AMN blue accent
         paper: "#FAFAF8", // page background
         ink: "#17161A", // primary text + primary action
         panel: "#FFFFFF", // cards
         panel2: "#F3F1EB", // subtle raised surface
         line: "#E7E4DD", // hairline borders
-        brand: { DEFAULT: "#17161A", 600: "#17161A", 700: "#000000" },
+        brand: { DEFAULT: "#0B7BC0", 600: "#0B7BC0", 700: "#0A6BA8" }, // AMN blue (legible on white)
         // Muted, sophisticated status colors (not neon)
         good: "#2F7D54",
         warn: "#B07A1E",
