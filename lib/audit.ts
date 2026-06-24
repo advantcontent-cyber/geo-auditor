@@ -414,7 +414,13 @@ function composeReport(c: ComposeInput): Report {
 /*  Public entry point                                                         */
 /* -------------------------------------------------------------------------- */
 
-export async function runAudit(rawUrl: string): Promise<Report> {
+export interface AuditResult {
+  report: Report;
+  engine: "ai" | "heuristic";
+  webSearch: boolean;
+}
+
+export async function runAudit(rawUrl: string): Promise<AuditResult> {
   const url = normalizeUrl(rawUrl);
   const domain = getDomain(url);
   const rand = seeded(domain);
@@ -424,7 +430,7 @@ export async function runAudit(rawUrl: string): Promise<Report> {
   // 1. Real AI analysis via OpenRouter, when configured.
   const llm = await analyzeWithLlm(url, domain, signals);
   if (llm) {
-    return composeReport({
+    const report = composeReport({
       url,
       domain,
       propertyName: llm.propertyName || signals.propertyName,
@@ -439,6 +445,8 @@ export async function runAudit(rawUrl: string): Promise<Report> {
       positives: llm.positives,
       actionPlan: llm.actionPlan,
     });
+    const webSearch = (process.env.OPENROUTER_WEB_SEARCH ?? "true") !== "false";
+    return { report, engine: "ai", webSearch };
   }
 
   // 2. Heuristic fallback.
@@ -447,7 +455,7 @@ export async function runAudit(rawUrl: string): Promise<Report> {
   const overall = DIMENSIONS.reduce((a, d) => a + scores[d.key] * (d.weight / 100), 0);
   const appears = overall >= 72;
 
-  return composeReport({
+  const report = composeReport({
     url,
     domain,
     propertyName: signals.propertyName,
@@ -465,4 +473,5 @@ export async function runAudit(rawUrl: string): Promise<Report> {
     positives: heuristicPositives(signals, scores),
     actionPlan: heuristicActionPlan(signals.propertyName),
   });
+  return { report, engine: "heuristic", webSearch: false };
 }
