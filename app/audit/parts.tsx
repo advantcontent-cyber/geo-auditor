@@ -179,7 +179,12 @@ export function ReportScreen({ report }: { report: Report }) {
           </div>
           <p className="mx-auto mt-5 max-w-md font-semibold text-ink">{r.headline}</p>
           <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">{r.summary}</p>
-          <a href="#book" className="btn-brand mt-6">
+          <a
+            href="https://theamn.network/#contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-brand mt-6"
+          >
             Book a GEO Strategy Call
           </a>
           <p className="mt-3 text-xs text-muted">Free 30-min call · No obligation</p>
@@ -301,7 +306,12 @@ export function ReportScreen({ report }: { report: Report }) {
             We help hotels improve their AI visibility so they appear in ChatGPT, Perplexity,
             and Google AI Overviews — and win more direct bookings.
           </p>
-          <a href="#book" className="btn-brand mt-6">
+          <a
+            href="https://theamn.network/#contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-brand mt-6"
+          >
             Book a GEO Strategy Call
           </a>
           <p className="mt-3 text-xs text-muted">
